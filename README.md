@@ -20,35 +20,12 @@
 - [Bootswatch](https://bootswatch.com/)  
 - [FontAwesome](https://fontawesome.com/)  
 
-## Getting Started
-
-### Prerequisites
-
-- Node.js and npm installed
-
-### Installation
-
-1. Clone the repository:
-
-git clone https://github.com/ManugAtma/ex_quiz_it.git
-cd ex_quiz_it
-
-2. Install dependencies:
-
-npm install
-
-3. Start the development server:
-
-npm run dev
-
-4. Open your browser at http://localhost:5173 (or the port Vite shows)
-
-##Usage
+## Usage
 
 - Click Play to start a new quiz
 - Adjust settings in the Settings page (category, difficulty, number of questions)
 - See your score and question stats at the end of the quiz
 
-##License
+## License
 
 This project is licensed under the MIT License.
