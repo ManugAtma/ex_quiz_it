@@ -1,12 +1,54 @@
-# React + Vite
+# ExQuizIt
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**ExQuizIt** is a quiz game website built as a Single Page Application (SPA) that fetches trivia questions from the [Open Trivia API](https://opentdb.com/api_config.php).  
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Single Page Application (SPA) with dynamic routing using **React Router**
+- Built with **React** and **Bootstrap**, fully responsive
+- Styled with **Bootswatch** (Lumen theme)
+- Uses **FontAwesome** icons for a modern UI
+- Multiple-choice trivia questions
+- Supports different categories and difficulty levels
+- Timer for each question
 
-## Expanding the ESLint configuration
+## Built With
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [React](https://reactjs.org/)  
+- [React Router](https://reactrouter.com/)  
+- [Bootstrap](https://getbootstrap.com/)  
+- [Bootswatch](https://bootswatch.com/)  
+- [FontAwesome](https://fontawesome.com/)  
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js and npm installed
+
+### Installation
+
+1. Clone the repository:
+
+git clone https://github.com/ManugAtma/ex_quiz_it.git
+cd ex_quiz_it
+
+2. Install dependencies:
+
+npm install
+
+3. Start the development server:
+
+npm run dev
+
+4. Open your browser at http://localhost:5173 (or the port Vite shows)
+
+##Usage
+
+- Click Play to start a new quiz
+- Adjust settings in the Settings page (category, difficulty, number of questions)
+- See your score and question stats at the end of the quiz
+
+##License
+
+This project is licensed under the MIT License.
