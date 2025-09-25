@@ -8,6 +8,19 @@ import GameCardFooter from './GameCardFooter';
 
 const GameContext = createContext();
 
+/**
+ * @component
+ * A wrapper for a game card providing context and children to the GameCard component.
+ * The children of GameCard are: 
+ * - Timer: shows the time left to answer a question
+ * - GameButtonSection: Buttons to control game state
+ * - Footer: displaying additional info about question.
+ *
+ * @param {function} dispatch - A function to control game state, i.e. finish or a start an ew game.
+ *
+ * @returns {React.ReactNode} - A Context.Provider containing the GameCard and its children.
+ * 
+ */
 function GameCardWrapper({ dispatch }) {
 
     const [clicked, setClicked] = useState(false);
@@ -62,7 +75,6 @@ function GameCardWrapper({ dispatch }) {
                         </div>
                     </GameCardFooter>
                 </Card.Footer>
-
             </GameCard>
         </GameContext.Provider>
     );

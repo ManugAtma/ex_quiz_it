@@ -1,17 +1,15 @@
-const baseURL = "https://opentdb.com/api.php?";
-const type = "&type=multiple";
-
+import { API_BASE_URL, API_QUERY_PARAM_TYPE } from "@/config";
 
 /**
  * 
- * Builds the full API URL for fetching trivia questions based on settings and token data.
+ * Builds the full API URL for fetching trivia questions for one game based on settings and token data.
  *
- * @param {{category:number, difficulty:string, amount: number}} - An object with these props
+ * @param {{category:number, difficulty:string, amount: number}} - An object with the following props
  * - category: defining the category of the questions to be fetched.
  * - difficulty: difficulty level of the questions: easy, medium, hard, mixed.
  * @param {{token:string}} - An Object with a session token as prop.
 
- * @returns {string} - The full URL. 
+ * @returns {string} - The full URL to fetch. 
  * 
  */
 
@@ -21,7 +19,7 @@ function buildQuery(settings, tokenData) {
     let difficulty = settings.difficulty ? `&difficulty=${settings.difficulty}` : "";
     let token = `&token=${tokenData.token}`;
 
-    return `${baseURL}amount=${settings.amount}${category}${difficulty}${type}${token}`;
+    return `${API_BASE_URL}amount=${settings.amount}${category}${difficulty}${API_QUERY_PARAM_TYPE}${token}`;
 }
 
 export default buildQuery;

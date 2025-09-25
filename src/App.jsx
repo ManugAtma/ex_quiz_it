@@ -1,6 +1,8 @@
 import { createContext, useRef } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import { API_CATEGORIES_URL, API_TOKEN_URL } from "./config";
+
 import Layout from "./components/Layout";
 import Play from './pages/play/Play';
 import Settings from "./pages/settings/Settings";
@@ -9,14 +11,6 @@ import useFetch from "./util/useFetch";
 
 
 const SettingsContext = createContext();
-
-// to fetch available categories from the API
-const settingsQuery = "https://opentdb.com/api_category.php";
-
-// to fetch a session token from the API
-const tokenQuery = "https://opentdb.com/api_token.php?command=request";
-
-const githubURL = "https://github.com/";
 
 /**
  * @component
@@ -36,8 +30,8 @@ function App() {
         difficulty: "",
     });
 
-    // const [data, settingsError] = useFetch(settingsQuery);
-    // const [token, tokenError] = useFetch(tokenQuery);
+    // const [data, settingsError] = useFetch(API_CATEGORIES_URL);
+    // const [token, tokenError] = useFetch(API_TOKEN_URL);
     // console.log(token);
 
     const data = "x";
@@ -64,4 +58,4 @@ function App() {
     );
 }
 
-export { App, SettingsContext, githubURL };
+export { App, SettingsContext };

@@ -52,7 +52,7 @@ function Game() {
                 <LoadingHandler data={data} error={error}>
                     {
                         gameState.gameFinished
-                            ? <PostGameScreen setData={setData} dispatch={dispatch} />
+                            ? <PostGameScreen setStats={setData} dispatch={dispatch} />
                             : <GameCardWrapper data={data} dispatch={dispatch} />
                     }
                 </LoadingHandler>

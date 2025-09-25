@@ -4,6 +4,16 @@ import { StatsContext } from "../game/Game";
 import decodeHTML from "../util/decodeHTML";
 import SummaryResult from "./SummaryResult";
 
+
+
+/**
+ * @component
+ * Displays a game summary by listing all questions 
+ * and providing additional info about them, e.g. if answered correctly.
+ *
+ * @returns {React.ReactNode} - A Container containing the list of questions.
+ * 
+ */
 function SummaryBox() {
 
     const [stats] = useContext(StatsContext);

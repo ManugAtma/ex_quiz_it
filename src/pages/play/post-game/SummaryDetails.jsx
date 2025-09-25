@@ -6,7 +6,24 @@ import Answers from "../game/Answers";
 import decodeHTML from '../util/decodeHTML';
 import GameCardFooter from '../game/GameCardFooter';
 
-
+/**
+ * @component
+ * Provides details about a single question of a finished game.
+ * Consists of a details button that on click displays a modal. 
+ * The modal provides additional infos about a question
+ * like available answers, correct answer, question category.
+ *
+ * @param {{
+ *  category:string, 
+ *  question:string, 
+ *  difficulty:string,
+ *  answers: Array<Object>
+ * }} - An nested object of the stats object representing a question and info related to it.
+ * @param {number} questionNum - The index of the question in the stats object.
+ *
+ * @returns {React.ReactNode} - A "Details" Button and a Modal that is shown on click.
+ * 
+ */
 
 function SummaryDetails({ currentStat, questionNum }) {
     const [show, setShow] = useState(false);

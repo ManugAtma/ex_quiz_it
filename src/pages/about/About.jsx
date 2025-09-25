@@ -1,4 +1,4 @@
-import { githubURL } from "../../App";
+import { GITHUB_URL } from "@/config";
 
 /**
  * @component
@@ -34,7 +34,7 @@ function About() {
                     Font Awesome
                 </a>. Feel free to have a look at the code on
                 <a
-                    href={githubURL}
+                    href={GITHUB_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="ms-1"

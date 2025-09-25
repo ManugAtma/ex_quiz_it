@@ -1,11 +1,23 @@
+import { useContext } from "react";
 import { Container } from "react-bootstrap";
+
+import { StatsContext } from "@/pages/play/game/Game";
+
 import SummaryDetails from "./SummaryDetails";
 import SummaryIcon from "./SummaryIcon";
-import { StatsContext } from "../game/Game";
-import { useContext } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHourglass } from '@fortawesome/free-solid-svg-icons';
 
+/**
+ * @component
+ * Displays the results of a single question of a finished game.
+ * Consists of an icon, the answer given by the user or "timeout",
+ * and a details button. 
+ *
+ * @param {number} i - The index of a question in the stats object.
+ *
+ * @returns {React.ReactNode} - A Container containing SummaryIcon, 
+ * a div displaying the answer and SummaryDetails:
+ * 
+ */
 
 function SummaryResult({ i }) {
 

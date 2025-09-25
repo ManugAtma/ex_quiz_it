@@ -5,15 +5,16 @@ import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-import { githubURL } from '@/App';
+import { GITHUB_URL } from '@/config';
 
 
 /**
  * @component
  * A responsive header that is always displayed. 
- * Contains the logo, a link to the code on Github and 
+ * Contains the logo, a link to the code of this project on Github and 
  * links to the pages of this website. 
- * These links are replaced by a Toggler for a small screen. 
+ * For a small screen the display of these links is 
+ * controlled via a Toggler.
  * 
  * @returns {JSX.Element} - A header containing 
  * - The logo of the website (top left).
@@ -38,7 +39,7 @@ function Header() {
                 {/* right: Small screen only (icon + toggler) */}
                 <div className="d-flex align-items-center ms-auto d-lg-none">
                     {/* gitHub icon (left of toggler) */}
-                    <a href={githubURL} target="_blank" rel="noopener noreferrer" className="me-2">
+                    <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" className="me-2">
                         <FontAwesomeIcon
                             icon={faGithub}
                             size="2x"
@@ -61,7 +62,7 @@ function Header() {
 
                     {/* gitHub icon for large screens only */}
                     <div className="d-none d-lg-block ms-auto">
-                        <a href={githubURL} target="_blank" rel="noopener noreferrer">
+                        <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon
                                 icon={faGithub}
                                 size="2x"

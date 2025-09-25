@@ -1,7 +1,24 @@
 import { useContext, useEffect, useRef } from 'react';
 import { ProgressBar, Container } from 'react-bootstrap';
+
 import { StatsContext } from './Game';
 
+/**
+ * @component
+ * A countdown timer as progress bar 
+ * displaying the time left to answer a question.
+ *
+ * @param {number} timeout - Total time to answer a question in ms.
+ * @param {number} delay - Re-render freqency in ms. e.g. 16 means component is re-rendered every 16ms
+ * @param {function} setClicked- A function to set the value of clicked.
+ * @param {boolean} clicked - Indicates if the user has clicked an answer yet or if time is up (true) or not (false).
+ * @param {number} remaining - Time left to answer a question.
+ * @param {function} setRemaining - Setter for param remaining.
+ * @param {number} questionNum - The index of a question in the stats object.
+ *
+ * @returns {JSX.Element} - A Container containing a progress bar. 
+ * 
+ */
 function Timer({ timeout, delay, setClicked, clicked, remaining, setRemaining, questionNum }) {
 
     const [stats] = useContext(StatsContext);

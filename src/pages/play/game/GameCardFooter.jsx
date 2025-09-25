@@ -1,3 +1,14 @@
+/**
+ * @component
+ * The content of a footer of a game card displaying difficulty 
+ * and number of current question as well as total amount of questions.
+ *
+ * @param {string} difficulty - The difficulty of the current question.
+ * @param {Object} children - Children components.
+ *
+ * @returns {React.ReactNode} - A div containing content for the game card footer.
+ * 
+ */
 
 function GameCardFooter({ difficulty, children }) {
 

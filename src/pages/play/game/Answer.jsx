@@ -1,6 +1,23 @@
 import { Col, Stack } from "react-bootstrap";
-import decodeHTML from "../util/decodeHTML";
+
+import decodeHTML from "@/pages/play/util/decodeHTML";
+
 import AnswerIcon from "./AnswerIcon";
+
+/**
+ * @component
+ * Displays one of four answers to a single question.
+ * 
+ * @param {{correct:boolean}} answer - A nested object of the stats object 
+ * representing a single answer with at least the specified props. 
+ * @param {number} i - The index of the answer (four answers per questions).
+ * @param {boolean} clicked - Indicates if the user has clicked an answer yet or if time is up (true) or not (false).
+ * @param {function} setClicked - A function to set the value of clicked.
+ * @param {number} questionNum - The index of a question in the stats object.
+ *
+ * @returns {JSX.Element} - A Col containing one answer.
+ * 
+ */
 
 function Answer({ answer, i, clicked, setClicked, questionNum }) {
 

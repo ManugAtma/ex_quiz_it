@@ -1,17 +1,31 @@
-import { Card, Button, Container } from "react-bootstrap";
-import Verdict from "./Verdict";
-import { NavLink } from "react-router-dom";
-import { StatsContext } from "../game/Game";
 import { useContext } from "react";
-import calcVerdict from "../util/calcVerdict";
+import { Card, Button, Container } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
-function VerdictBox({ dispatch, setData }) {
+import { StatsContext } from "@/pages/play/game/Game";
+import calcVerdict from "@/pages/play/util/calcVerdict";
+
+import Verdict from "./Verdict";
+
+/**
+ * @component
+ * A wrapper for the verdict, i.e the evaluation of a finished game
+ * that is displayed, and Buttons to go to settings or start a new game.
+ * 
+ * @param {function} setStats - A function to (re)set the stats object.
+ * @param {function} dispatch - A function to control game state, i.e. finish or a start an ew game.
+ *
+ * @returns {React.ReactNode} - A Container containing the Verdict as well as 
+ * the new game and settings Buttons.
+ * 
+ */
+function VerdictBox({ dispatch, setStats }) {
 
     const [stats] = useContext(StatsContext);
 
     function startNewGame() {
         dispatch({ type: "NEW_GAME" });
-        setData(null);
+        setStats(null);
         stats.current = "";
     }
 
