@@ -1,15 +1,30 @@
 import { useReducer, useContext, createContext, useRef } from 'react';
+
+import useFetch from '@/util/useFetch';
+import { SettingsContext } from '@/App';
+import buildQuery from '@/pages/play/util/buildQuery';
+import LoadingHandler from '@/components/LoadingHandler';
+import prepareStats from '@/pages/play/util/prepareStats';
+import PostGameScreen from '@/pages/play/post-game/PostGameScreen';
+
 import { GameCardWrapper } from './GameCardWrapper';
-import PostGameScreen from '../post-game/PostGameScreen';
-import useFetch from '../../../util/useFetch';
-import { SettingsContext } from '../../../App';
-import buildQuery from '../util/buildQuery';
-import LoadingHandler from '../../../components/LoadingHandler';
 import test from './testObject';
-import prepareStats from '../util/prepareStats';
+
 
 const StatsContext = createContext();
 
+
+/**
+ * @component
+ * Shows everything related to a current game, 
+ * either ongoing (GameCardWrapper)
+ * or finished (PostGameScreen)
+ * or a loading animation if game data is not fetched yet.
+ *
+ * @returns {React.ReactNode}  - A Context.Provider for LoadingHandler,
+ * PostGameScreen and GameCardWrapper.
+ * 
+ */
 function Game() {
 
     const stats = useRef("");
