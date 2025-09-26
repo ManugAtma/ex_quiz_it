@@ -7,6 +7,7 @@ import LoadingHandler from '@/components/LoadingHandler';
 
 import Categories from './Categories';
 import SavedAlert from './SavedAlert';
+import Setting from './Setting';
 
 
 /**
@@ -47,33 +48,37 @@ function Settings({ data, error }) {
             <Container className='mt-2'>
                 <h2 className='borsok-font'>Settings</h2>
                 <Form onSubmit={saveSettings}>
-                    <Form.Group className="mb-3 mt-4">
-                        <Form.Label>Amount of Questions per Game</Form.Label>
-                        <Form.Select value={amount} onChange={e => setAmount(e.target.value)}>
-                            <option value="5">5</option>
-                            <option value="10">10</option>
-                            <option value="25">25</option>
-                            <option value="50">50</option>
-                        </Form.Select>
-                    </Form.Group>
 
-                    <Form.Group className="mb-3">
-                        <Form.Label>Category</Form.Label>
-                        <Form.Select value={category} onChange={e => setCategory(e.target.value)}>
-                            <option value="" key="mix">Mixed</option>
-                            <Categories categories={categories} />
-                        </Form.Select>
-                    </Form.Group>
+                    <Setting
+                        value={amount}
+                        onChange={e => setAmount(e.target.value)}
+                        label={"Amount of Questions per Game"}
+                    >
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                    </Setting>
 
-                    <Form.Group className="mb-3">
-                        <Form.Label>Difficulty</Form.Label>
-                        <Form.Select value={difficulty} onChange={e => setDifficulty(e.target.value)}>
-                            <option value="">Mixed</option>
-                            <option value="easy">Easy</option>
-                            <option value="medium">Medium</option>
-                            <option value="hard">Hard</option>
-                        </Form.Select>
-                    </Form.Group>
+                    <Setting
+                        value={category}
+                        onChange={e => setCategory(e.target.value)}
+                        label={"Category"}
+                    >
+                        <option value="" key="mix">Mixed</option>
+                        <Categories categories={categories} />
+                    </Setting>
+
+                    <Setting
+                        value={difficulty}
+                        onChange={e => setDifficulty(e.target.value)}
+                        label={"Difficulty"}
+                    >
+                        <option value="">Mixed</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </Setting>
 
                     <Button variant="primary" type="submit">
                         Save
@@ -84,7 +89,6 @@ function Settings({ data, error }) {
                             ? <SavedAlert setShowAlert={setShowAlert} delay={2000} />
                             : ""
                     }
-
                 </Form>
             </Container>
         </LoadingHandler>

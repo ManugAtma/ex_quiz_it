@@ -20,7 +20,7 @@ import { GITHUB_URL } from '@/config';
  * - The logo of the website (top left).
  * - Links to the pages: play, settings, about.
  * - Link to the code on github.
- * - A toggler for small screens (smaller that bootstraps lg). 
+ * - A toggler for small screens (i.e. smaller than bootstrap's lg). 
  */
 function Header() {
     return (

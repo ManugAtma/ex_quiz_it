@@ -1,4 +1,4 @@
-import buildAnswers from "./buildAnswers";
+import { buildAnswers } from "./buildAnswers";
 
 /**
  * 

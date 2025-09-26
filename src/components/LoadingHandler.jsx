@@ -21,7 +21,7 @@ function LoadingHandler({ data, error, children }) {
     if (!data && !error) {
         return (
             <div className="text-center">
-                <Spinner animation="border" variant="primary" />
+                <Spinner animation="border" variant="primary" role="status" />
             </div>);
     }
 
