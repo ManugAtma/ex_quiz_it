@@ -8,7 +8,6 @@ import prepareStats from '@/pages/play/util/prepareStats';
 import PostGameScreen from '@/pages/play/post-game/PostGameScreen';
 
 import { GameCardWrapper } from './GameCardWrapper';
-import test from './testObject';
 
 
 const StatsContext = createContext();
@@ -16,7 +15,7 @@ const StatsContext = createContext();
 
 /**
  * @component
- * Shows everything related to a current game, 
+ * Shows everything related to a current game:
  * either ongoing (GameCardWrapper)
  * or finished (PostGameScreen)
  * or a loading animation if game data is not fetched yet.
