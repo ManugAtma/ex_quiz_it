@@ -34,7 +34,11 @@ function SummaryDetails({ currentStat, questionNum }) {
     return (
         <>
 
-            <Button variant="primary" onClick={handleShow}>
+            <Button
+                variant="primary"
+                onClick={handleShow}
+                data-testid="details-btn"
+            >
                 Details
             </Button>
 

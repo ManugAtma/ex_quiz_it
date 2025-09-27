@@ -37,9 +37,9 @@ function Header() {
                 </Navbar.Brand>
 
                 {/* right: Small screen only (icon + toggler) */}
-                <div className="d-flex align-items-center ms-auto d-lg-none">
+                <div className="d-flex align-items-center ms-auto m d-lg-none">
                     {/* gitHub icon (left of toggler) */}
-                    <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" className="me-2">
+                    <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" className="me-3">
                         <FontAwesomeIcon
                             icon={faGithub}
                             size="2x"
@@ -61,7 +61,7 @@ function Header() {
                     </Nav>
 
                     {/* gitHub icon for large screens only */}
-                    <div className="d-none d-lg-block ms-auto">
+                    <div className="d-none d-lg-block ms-auto me-2">
                         <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon
                                 icon={faGithub}

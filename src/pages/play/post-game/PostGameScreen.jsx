@@ -24,6 +24,8 @@ function PostGameScreen({ setStats, dispatch }) {
     const correctAnswers = useRef(calcCorrectAnswers(stats.current.questions));
     stats.current.correctAnswers = correctAnswers.current;
 
+    console.log(stats.current);
+
     return (
         <>
             <VerdictBox dispatch={dispatch} setStats={setStats} />

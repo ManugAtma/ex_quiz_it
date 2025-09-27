@@ -16,7 +16,7 @@ const GameContext = createContext();
  * - GameButtonSection: Buttons to control game state
  * - Footer: displaying additional info about question.
  *
- * @param {function} dispatch - A function to control game state, i.e. finish or a start an ew game.
+ * @param {function} dispatch - A function to control game state, i.e. finish or a start a new game.
  *
  * @returns {React.ReactNode} - A Context.Provider containing the GameCard and its children.
  * 

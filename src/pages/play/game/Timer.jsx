@@ -55,7 +55,12 @@ function Timer({ timeout, delay, setClicked, clicked, remaining, setRemaining, q
 
     return (
         <Container className={"p-3"}>
-            <ProgressBar now={remaining} variant={variant} key={questionNum} />
+            <ProgressBar
+                now={remaining}
+                variant={variant}
+                key={questionNum}
+                data-testid="timer-progress"
+            />
         </Container>
     );
 }

@@ -17,6 +17,9 @@ import { faFaceGrinHearts, faFaceGrinStars, faFaceSmileBeam, faFaceMeh, faFaceFr
  */
 function calcVerdict(total, correct) {
 
+    if(correct > total) {
+        throw new Error("correct cannot be greater than total")
+    }
 
     if (total == correct) {
         return ["Perfect!", faFaceGrinHearts, "success"];

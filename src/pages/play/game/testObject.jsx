@@ -9,4 +9,4 @@ const test = { "response_code": 0, "results": [{ "type": "multiple", "difficulty
 
 
 
-export default test;
+export  default test ;

@@ -58,6 +58,7 @@ function Answer({ answer, i, clicked, setClicked, questionNum }) {
             className={`${borders} ${bgColor} ${clickable} d-flex align-items-center justify-content-center`}
             onClick={() => handleClick(answer, i)}
             style={{ minHeight: 6 + 'em' }}
+            data-testid={answer.correct ? "correct-answer" : ""}
         >
             <Stack className="h-100 justify-content-between">
                 <div className="answer-top-bottom">

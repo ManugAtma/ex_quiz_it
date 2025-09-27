@@ -26,11 +26,25 @@ function GameButtonSection({ questionNum, numOfQuestions, dispatch, nextQuestion
             {
                 function () {
                     if (clicked && questionNum < numOfQuestions - 1) {
-                        return <Button onClick={nextQuestion} variant="success">next</Button>;
+                        return (
+                            <Button
+                                onClick={nextQuestion}
+                                variant="success"
+                                data-testid="next-btn"
+                            >
+                                next
+                            </Button>);
                     }
 
                     if (clicked && !(questionNum < numOfQuestions - 1)) {
-                        return <Button onClick={() => dispatch({ type: "FINISH" })} variant="primary">finish</Button>;
+                        return (
+                            <Button
+                                onClick={() => dispatch({ type: "FINISH" })}
+                                variant="primary"
+                                data-testid="finish-btn"
+                            >
+                                finish
+                            </Button>);
                     }
 
                     return "";

@@ -31,7 +31,7 @@ function PreGameScreen({ setPlaying }) {
                 <Card.Body >
                     <Card.Text>
                         Press play to start a new game. Go to settings to adjust games to your preferences.                    </Card.Text>
-                    <Button onClick={() => setPlaying(true)} variant="primary">play</Button>
+                    <Button onClick={() => setPlaying(true)} variant="primary" data-testid="play-btn">play</Button>
                     <Button as={NavLink} to="/settings" className="ms-2">settings</Button>
                 </Card.Body>
             </Card>

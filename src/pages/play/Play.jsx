@@ -7,7 +7,7 @@ import { Game } from './game/Game';
 
 /**
  * @component
- * Top level component for the play section of the page.
+ * Highest level component for the play section of the page.
  * 
  * @returns {JSX.Element} Game in case a new game was started, PreGameScreen otherwise.
  */
