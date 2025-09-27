@@ -4,9 +4,9 @@
 
 ## Features
 
-- Single Page Application (SPA) with dynamic routing using **React Router**
-- Built with **React** and **Bootstrap**, fully responsive
-- Styled with **Bootswatch** (Lumen theme)
+- Single Page Application with dynamic routing using **React Router**
+- Fully responsive using **Bootstrap**
+- Styled with **Bootswatch** Lumen theme
 - Uses **FontAwesome** icons for a modern UI
 - Multiple-choice trivia questions
 - Supports different categories and difficulty levels
@@ -19,6 +19,29 @@
 - [Bootstrap](https://getbootstrap.com/)  
 - [Bootswatch](https://bootswatch.com/)  
 - [FontAwesome](https://fontawesome.com/)  
+- [Jest](https://jestjs.io/) (testing)  
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) (testing) 
+
+## Installation & Running Locally
+
+1. Clone the repository 
+
+   `git clone <your-repo-url>` <br>
+   `cd exquizit` 
+
+2. Install dependencies
+
+    `npm install`
+
+3. Start the development server
+
+    `npm run dev`
+
+4. Run the test suite
+
+    `npm test`
+
+
 
 ## Usage
 
