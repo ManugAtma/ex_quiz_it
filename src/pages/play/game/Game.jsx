@@ -46,20 +46,13 @@ function Game() {
     }
 
     const [gameState, dispatch] = useReducer(gameReducer, initialState);
-
     const [settings, token, tokenError] = useContext(SettingsContext);
-
     const query = buildQuery(settings.current, token);
 
     // fetch questions
-
-    // const [data, error, setData] = useFetch(query, [gameState.gameId]);
-    // if (data && !stats.current) stats.current = prepareStats(data);
-
-    const data = test;
-    const error = "";
-    const setData = () => { };
-    if (data && !stats.current) stats.current = prepareStats(test);
+    const [data, error, setData] = useFetch(query, [gameState.gameId]);
+    
+    if (data && !stats.current) stats.current = prepareStats(data);
 
     return (
         <StatsContext.Provider value={[stats]}>

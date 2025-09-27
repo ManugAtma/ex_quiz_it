@@ -30,15 +30,8 @@ function App() {
         difficulty: "",
     });
 
-    // const [data, settingsError] = useFetch(API_CATEGORIES_URL);
-    // const [token, tokenError] = useFetch(API_TOKEN_URL);
-    // console.log(token);
-
-    const data = "x";
-    const settingsError = "";
-
-    const token = "y";
-    const tokenError = "";
+    const [data, settingsError] = useFetch(API_CATEGORIES_URL);
+    const [token, tokenError] = useFetch(API_TOKEN_URL);
 
     return (
         <SettingsContext.Provider value={[settings, token, tokenError]}>
