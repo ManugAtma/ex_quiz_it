@@ -27,7 +27,7 @@
 1. Clone the repository 
 
    `git clone https://github.com/ManugAtma/ex_quiz_it.git` <br>
-   `cd exquizit` 
+   `cd ex_quiz_it` 
 
 2. Install dependencies
 
